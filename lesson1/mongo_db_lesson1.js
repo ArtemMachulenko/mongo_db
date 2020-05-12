@@ -273,27 +273,27 @@ db.teacher.insertMany(
 //---------------------------------------------
 // 12) Знайти дітей з не повною сімєю
 
-db.getCollection('students').aggregate([
-    {
-        $match: {
-            $or: [
-                {
-                    parents: {$exists: 0}
-                },
-                {
-                    parents: {$size: 1}
-                }
-            ]
-        }
-    },
-    {
-        $project: {
-            id: "$id",
-            name: "$name",
-            parents: "$parents"
-        }
-    }
-])
+// db.getCollection('students').aggregate([
+//     {
+//         $match: {
+//             $or: [
+//                 {
+//                     parents: {$exists: 0}
+//                 },
+//                 {
+//                     parents: {$size: 1}
+//                 }
+//             ]
+//         }
+//     },
+//     {
+//         $project: {
+//             id: "$id",
+//             name: "$name",
+//             parents: "$parents"
+//         }
+//     }
+// ])
 //---------------------------------------------
 // 13) Знайти батьків які не працюють
 
