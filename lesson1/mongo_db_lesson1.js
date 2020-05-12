@@ -391,4 +391,3 @@ db.teacher.insertMany(
 //     {$limit: 1}
 // ])
 //
-    
